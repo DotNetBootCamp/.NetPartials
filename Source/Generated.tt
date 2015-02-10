@@ -6,11 +6,20 @@
 <#@ import namespace="T4Helpers" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ output extension=".cs" #>
+using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace Source
 {
 <#foreach(var table in DatabaseTables){#>
     public partial class <#=table.Name #>
     {
+<#foreach(var column in table.Columns){#>
+<#if (column.IsRequired){#>
+        [Required]
+<#}#>
+        public <#=column.DotNetType #> <#=column.Name #> { get; set;}
+<#}  #>
     }
 <#}  #>
 }<#+
