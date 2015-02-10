@@ -18,6 +18,7 @@ namespace Source
         public DateTime? LastLoggedInUtc { get; set;}
         public Pet FavouritePet { get; set;}
     }
+
     public partial class Pet
     {
         [Required]
