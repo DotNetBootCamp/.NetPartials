@@ -16,7 +16,7 @@ namespace T4Helpers
                         new DbColumn("UserId","int", true),
                         new DbColumn("Name","string", true),
                         new DbColumn("Username","string", true),
-                        new DbColumn("TimesLoggedIn","int", true),
+                        new DbColumn("TimesLoggedIn","int?", false),
                         new DbColumn("DateCreatedUtc","DateTime", true),
                         new DbColumn("LastLoggedInUtc","DateTime?", false),
                         new DbColumn("FavouritePet","Pet",false)

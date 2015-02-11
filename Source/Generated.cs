@@ -11,8 +11,7 @@ namespace Source
         public string Name { get; set;}
         [Required]
         public string Username { get; set;}
-        [Required]
-        public int TimesLoggedIn { get; set;}
+        public int? TimesLoggedIn { get; set;}
         [Required]
         public DateTime DateCreatedUtc { get; set;}
         public DateTime? LastLoggedInUtc { get; set;}

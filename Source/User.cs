@@ -7,6 +7,9 @@ namespace Source
     {
         public bool IsActive { get; set; }
 
+        [Required]
+        public string SomeDescription { get; set; }
+
         internal sealed class UserMetadata
         {
             // Metadata classes are not meant to be instantiated.
@@ -16,6 +19,9 @@ namespace Source
 
             [Required]
             public Pet FavouritePet;
+
+            [Required]
+            public int TimesLoggedIn;
         }
     }
 }
