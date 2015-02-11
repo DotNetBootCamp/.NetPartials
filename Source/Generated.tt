@@ -23,6 +23,5 @@ namespace Source
     }
 <#}  #>
 }<#+
-        List<string> DatabaseTableNames = new List<string> { "Users", "Products", "Orders" };
         List<DbTable> DatabaseTables = MockData.GetAllTables();
 #>
